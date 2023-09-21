@@ -1,6 +1,6 @@
 
 async function wrapKeyWithKWKey(keyToBeWrapped, wrappingKey) {
-    console.log("wrapKeyWithKey called");
+
     // get the wrapped key
     try {
         let wrappedKey = await window.crypto.subtle.wrapKey(

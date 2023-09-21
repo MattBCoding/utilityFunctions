@@ -1,4 +1,9 @@
-
+/**
+ * Derives a key from a password and salt using the PBKDF2 algorithm.
+ * @param {string} password 
+ * @param {Uint8Array} salt 
+ * @returns {CryptoKey}
+ */
 async function deriveKeyFromPassword(password, salt) {
     console.log("deriveKeyFromPassword called");
     const encoder = new TextEncoder();

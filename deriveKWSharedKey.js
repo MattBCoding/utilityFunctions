@@ -1,5 +1,10 @@
 
-
+/**
+ * Derives a shared AES-KW key for wrapping/unwrapping from a private and public key.
+ * @param {CryptoKey} privateKey 
+ * @param {CryptoKey} publicKey 
+ * @returns {CryptoKey} - The shared AES-KW key
+ */
 
 
 async function deriveKWSharedKey(privateKey, publicKey) {

@@ -1,5 +1,4 @@
 async function generateSigningKeyPair() {
-    console.log("generateSigningKeyPair called");
 
     let key = window.crypto.subtle.generateKey(
         {

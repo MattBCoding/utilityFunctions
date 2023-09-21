@@ -1,7 +1,14 @@
 import convertArrayBufferToBase64 from "./convertArrayBufferToBase64";
 import convertIdTo16ByteArray from "./convertIdTo16ByteArray";
-import convertKWToCBC from "./convertKWToCBC";
+import convertKWToCBC from "./convertKWtoCBC";
 
+/**
+ * 
+ * @param {*} data 
+ * @param {*} key 
+ * @param {*} nodeID 
+ * @returns 
+ */
 
 async function encryptString(data, key, nodeID) {
     // convert the data to be encrypted to an array buffer

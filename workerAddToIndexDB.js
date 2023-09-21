@@ -1,5 +1,5 @@
 onmessage = (e) => {
-    console.log("message received from main thread");
+
     const db = self.indexedDB.open(e.data[0], e.data[1]);
 
     db.onerror = (event) => {
@@ -21,7 +21,6 @@ onmessage = (e) => {
             objectStore.createIndex("email", "email", { unique: true });
         }
 
-        console.log("Database setup complete from within webworker");
     };
 
     db.onsuccess = (event) => {

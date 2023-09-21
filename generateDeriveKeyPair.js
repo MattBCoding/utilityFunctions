@@ -1,5 +1,4 @@
 async function generateDeriveKeyPair() {
-    console.log("generateDeriveKeyPair called");
 
     let key = window.crypto.subtle.generateKey(
         {

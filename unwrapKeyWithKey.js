@@ -2,7 +2,7 @@
 
 
 async function unwrapKeyWithKey(keyToBeUnwrapped, wrappingKey, iv) {
-    console.log("unwrapKeyWithKey called");
+
     // get the wrapped key
     try {
         let unwrappedKey = await window.crypto.subtle.unwrapKey(
@@ -20,7 +20,7 @@ async function unwrapKeyWithKey(keyToBeUnwrapped, wrappingKey, iv) {
             true,
             ["sign"]
         );
-        console.log("unwrappedKey unwrapKeyWithKey: ", unwrappedKey);
+
 
         return unwrappedKey;
     } catch (e) {

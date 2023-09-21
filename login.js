@@ -17,7 +17,7 @@ async function login(email, password, bID, tID) {
         let salt = value[1];
         let userId = value[2];
         let wrappedDeviceDSAPriv = value[3];
-        console.log("resultArray: ", resultArray);
+
         let iv = await convertIdTo16ByteArray(userId);
         let wrappingKey = await deriveKeyFromPassword(password, salt);
         let deviceDSAPrivJwk = await unwrapKeyWithKey(wrappedDeviceDSAPriv, wrappingKey, iv);
@@ -34,7 +34,7 @@ async function login(email, password, bID, tID) {
         let signature = await generateSignature(unsignedTransactionAB, deviceDSAPrivJwk);
         let unsignedTransactionBase64 = await convertArrayBufferToBase64(unsignedTransactionAB);
         let request = await generateLoginRequest(unsignedTransactionBase64, signature, email);
-        console.log(request)
+
         return request;
     };
     return await getLoginVariablesFromDb(email, updateResultArray);

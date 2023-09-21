@@ -1,5 +1,5 @@
 async function generateSignature(message, key) {
-    //console.log("generating signature")
+
     let signature = await window.crypto.subtle.sign(
         {
             name: "ECDSA",
@@ -9,7 +9,7 @@ async function generateSignature(message, key) {
         message
     );
     
-    //console.log("signature generated - converting to base64 string")
+
     // convert signature from array buffer to base64
     let binary = '';
     let bytes = new Uint8Array(signature);
@@ -18,8 +18,7 @@ async function generateSignature(message, key) {
         binary += String.fromCharCode(bytes[i]);
     }
     let base64 = window.btoa(binary);
-    //console.log("signature converted to base64 string")
-    //console.log(base64);
+
     return base64;
     
 }

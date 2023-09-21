@@ -1,4 +1,9 @@
-
+/**
+ * Derives a shared key for AES-CBC wrapping/unwrapping.
+ * @param {CryptoKey} privateKey 
+ * @param {CryptoKey} publicKey 
+ * @returns {CryptoKey} - The shared key
+ */
 
 async function deriveCBCSharedKey(privateKey, publicKey) {
     console.log("deriveCBCSharedKey called");
